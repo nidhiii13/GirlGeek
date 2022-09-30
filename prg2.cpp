@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int quicksort(int number[25],int first,int last){
+int quick(int number[25],int first,int last){
    int i, j, pivot, temp,m,n;
 int c=0;
    if(first<last){
@@ -23,8 +23,8 @@ int c=0;
       number[pivot]=number[j];
       number[j]=temp;
       
-      m= quicksort(number,first,j-1);
-     n=quicksort(number,j+1,last);
+      m= quick(number,first,j-1);
+     n=quick(number,j+1,last);
      return c+n+m;
    }
 }
@@ -34,8 +34,8 @@ int main(){
     int a[30000];
     int m;
     cout << "Size    "
-         << "Asc   C*n^n   "
-         << "dsc    C*n^n "
+         << "Ascending   C*n^n   "
+         << "Descending    C*n^n "
          << "random     C*nlog(n)" << endl;
     for (int i = 0; i < 6; i++)
     {
@@ -44,19 +44,19 @@ int main(){
         {
             a[j] = j;
         }
-        m = quicksort(a, 0, size - 1);
+        m = quick(a, 0, size - 1);
         cout << m << "\t" << 3 * size * log2(size) << "\t";
         for (int j = 0; j < size; j++)
         {
             a[j] = size - j;
         }
-        m = quicksort(a, 0, size - 1);
+        m = quick(a, 0, size - 1);
         cout << m << "\t" << 3 * size * log2(size) << "\t  ";
         for (int j = 0; j < size; j++)
         {
             a[j] = rand() % 10000;
         }
-        m = quicksort(a, 0, size - 1);
+        m = quick(a, 0, size - 1);
         cout << m << "\t\t" << 3 * size * log2(size) << "\t";
         size = size * 2;
         cout << endl;
