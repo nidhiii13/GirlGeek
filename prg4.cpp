@@ -3,7 +3,7 @@ using namespace std;
 int st[10],t=-1,p[10],j=0,c=0,n;
 void push(int i)
 {
-st[++t]=i;
+    st[++t]=i;
 }
 int pop()
 {
@@ -71,7 +71,7 @@ int main()
     cout<<"1.Vertices removal method\n2.DFS method\nEnter your choice:";
     cin>>ch;
     if(ch==1){
-       cout<<"\nTOPOLOGICAL ORDERING : ";
+       cout<<"\nThe elements in TOPOLOGICAL ORDERING : ";
        vertices_rem(a,in,sv,f);
     }
     if(ch==2){
