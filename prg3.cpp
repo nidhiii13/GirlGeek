@@ -63,11 +63,11 @@ int main()
     cout<<"Enter 0 to stop entering\n";
     while(true)
     {
-        cout<<"Start vertex:";
+        cout<<"The Start vertex is:";
         cin>>s;
         if(s==0)
         break;
-        cout<<"End vertex:";
+        cout<<"The End vertex is:";
         cin>>e;
         a[s][e]=1;
         a[e][s]=1;
