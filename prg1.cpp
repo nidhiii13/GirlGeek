@@ -58,7 +58,8 @@ int mergeSort(int a[], int l, int h)
     int x = mergeSort(a, l, mid);
     int y = mergeSort(a, mid + 1, h);
     int z = merge(a, l, mid, h);
-    return x + y + z;
+    int result = x+y+z;
+    return result;
 }
 
 int main()
