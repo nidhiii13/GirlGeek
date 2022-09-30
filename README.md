@@ -1,2 +1,2 @@
 # GirlGeek
-Hacktober Fest
+Algorithms for Hacktober Fest
