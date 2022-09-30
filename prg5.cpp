@@ -70,8 +70,7 @@ void analysis()
 int main()
 {
     int n;
-    cout << "Heapsort Algorithm\n";
-    cout << "Enter the size of array\n";
+    cout << "Enter the size of array you want\n";
     cin >> n;
     int a[n + 1];
     cout << "Enter the elements: ";
